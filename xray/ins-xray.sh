@@ -385,6 +385,7 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              root /home/vps/public_html;
         }
 EOF
+sed -i 'if ($http_upgrade != "upgrade") { return 404; }' /etc/nginx/conf.d/xray.conf
 sed -i '$ ilocation = /vless' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
