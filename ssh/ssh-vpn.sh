@@ -358,6 +358,11 @@ wget -O xp "https://autoscript.caliphdev.com/ssh/xp.sh"
 wget -O sshws "https://autoscript.caliphdev.com/ssh/sshws.sh"
 wget -O m-dns "https://autoscript.caliphdev.com/menu/m-dns.sh"
 
+# Menu IPsec
+wget -O m-l2tp "https://autoscript.caliphdev.com/menu/m-l2tp.sh"
+wget -O m-sstp "https://autoscript.caliphdev.com/menu/m-sstp.sh"
+wget -O m-pptp "https://autoscript.caliphdev.com/menu/m-pptp.sh"
+
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -365,6 +370,9 @@ chmod +x running
 chmod +x clearcache
 chmod +x m-ssws
 chmod +x m-trojan
+chmod +x m-pptp
+chmod +x m-sstp
+chmod +x m-l2tp
 
 chmod +x m-sshovpn
 chmod +x usernew

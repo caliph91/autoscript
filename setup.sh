@@ -154,6 +154,14 @@ sleep 0.5
 clear
 wget https://autoscript.caliphdev.com/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://autoscript.caliphdev.com/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#Instal IPSec
+echo -e "\e[33m-----------------------------------\033[0m"
+echo -e "$BGreen          Install IPSec              $NC"
+echo -e "\e[33m-----------------------------------\033[0m"
+sleep 0.5
+clear
+wget https://autoscript.caliphdev.com/ipsec/ipsec.sh && chmod +x ipsec.shh && ./ipsec.sh
+wget https://autoscript.caliphdev.com/sstp/sstp.sh && chmod +x sstp.sh && ./sstp.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
