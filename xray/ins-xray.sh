@@ -384,9 +384,9 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
              root /home/vps/public_html;
         }
-        if (\$http_upgrade != "upgrade") { return 404; }
 EOF
 
+echo "if (\$http_upgrade != \"websocket\") { return 404; }" >> /etc/nginx/conf.d/xray.conf
 sed -i '$ ilocation = /vless' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
