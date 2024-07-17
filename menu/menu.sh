@@ -113,11 +113,11 @@ echo -e "\e[1;36m 4 \e[0m: Menu Trojan"
 echo -e "\e[1;36m 5 \e[0m: Menu Shadowsocks"
 echo -e "\e[1;36m 6 \e[0m: Menu L2TP"
 echo -e "\e[1;36m 7 \e[0m: Menu PPTP"
-echo -e "\e[1;36m 7 \e[0m: Menu SSTP"
-echo -e "\e[1;36m 8 \e[0m: Menu Setting"
-echo -e "\e[1;36m 9 \e[0m: Status Service"
-echo -e "\e[1;36m 10 \e[0m: Clear RAM Cache"
-echo -e "\e[1;36m 11 \e[0m: Reboot VPS"
+echo -e "\e[1;36m 8 \e[0m: Menu SSTP"
+echo -e "\e[1;36m 9 \e[0m: Menu Setting"
+echo -e "\e[1;36m 10 \e[0m: Status Service"
+echo -e "\e[1;36m 11 \e[0m: Clear RAM Cache"
+echo -e "\e[1;36m 12 \e[0m: Reboot VPS"
 echo -e "\e[1;36m x \e[0m: Exit Script"
 echo -e   ""
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
@@ -135,10 +135,10 @@ case $opt in
 3) clear ; m-vless ;;
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
-6) clear ; m-system ;;
-7) clear ; m-l2tp ;;
-8) clear ; m-pptp ;;
-9) clear ; m-pptp ;;
+6) clear ; m-l2tp ;;
+7) clear ; m-pptp ;;
+8) clear ; m-sstp ;;
+9) clear ; m-system ;;
 10) clear ; running ;;
 11) clear ; clearcache ;;
 12) clear ; reboot ; /sbin/reboot ;;
