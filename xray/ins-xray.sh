@@ -384,7 +384,7 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
              ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
              root /home/vps/public_html;
         }
-        if ($http_upgrade != "upgrade") { return 404; }
+        if (\$http_upgrade != "upgrade") { return 404; }
 EOF
 
 sed -i '$ ilocation = /vless' /etc/nginx/conf.d/xray.conf
