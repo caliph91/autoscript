@@ -4,13 +4,13 @@ apt install jq curl -y
 rm -rf /root/xray/scdomain
 mkdir -p /root/xray
 clear
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=clp.my.id
-SUB_DOMAIN=vpn-${sub}.clp.my.id
+IP=$(wget -qO- ipinfo.io/ip);
+sub="ip-$(echo $IP | tr '.' '-')"
+DOMAIN=caliph.eu.org
+SUB_DOMAIN=${sub}.caliph.eu.org
 CF_ID=caliphatibrata368@gmail.com
 CF_KEY=5d8a85857f32513b5d78918862a98acf6aa0e
 set -euo pipefail
-IP=$(wget -qO- ipinfo.io/ip);
 echo "Record DNS ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
